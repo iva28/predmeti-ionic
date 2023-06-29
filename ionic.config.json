@@ -1,0 +1,7 @@
+{
+  "name": "predmeti",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
