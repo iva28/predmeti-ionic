@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-center">Svi predmeti</ion-title>
+    <ion-title class="ion-text-center" [routerLink]="['/home']">Svi predmeti</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,7 +21,13 @@
           <p style="color: grey; font-size:large;"> Obavezan: {{ predmet.obavezan }}</p>
         </ion-label>
         <br>
+
       </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option [routerLink]="['/edit-predmet/',predmet.id]">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
 
       <ion-item-options side="end">
         <ion-item-option color="danger" (click)="obrisiPredmet(predmet.id)">

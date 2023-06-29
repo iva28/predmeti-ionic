@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Edit predmet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Naziv</ion-label>
+    <ion-input type="text" [(ngModel)]="predmet.naziv" readonly disabled required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Semestar</ion-label>
+    <ion-input type="text" [(ngModel)]="predmet.semestar" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">ESPB</ion-label>
+    <ion-input type="text" [(ngModel)]="predmet.espb" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Obavezan</ion-label>
+    <ion-input type="text" [(ngModel)]="predmet.obavezan" required></ion-input>
+  </ion-item>
+
+
+  <ion-button
+    class="ion-padding"
+    color="primary"
+    expand="full"
+    (click)="updatePredmet(predmet)" 
+    >Update</ion-button
+  >
+</ion-content>

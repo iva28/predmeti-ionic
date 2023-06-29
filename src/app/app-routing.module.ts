@@ -8,21 +8,27 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+ 
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  // },
-  // {
-  //   path: 'login',
-  //   loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  // }
+  {
+    path: 'add-predmet',
+    loadChildren: () => import('./add-predmet/add-predmet.module').then( m => m.AddPredmetPageModule)
+  },
+  {
+    path: 'edit-predmet/:id',
+    loadChildren: () => import('./edit-predmet/edit-predmet.module').then( m => m.EditPredmetPageModule)
+  },
+ 
 ];
 @NgModule({
   imports: [
